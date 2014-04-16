@@ -1,7 +1,8 @@
 <?php
 
 class CI_Email {
-
+	//These settings need to be changed to the needs of your SMTP server:
+	
 	var $smtp_default_from = 'yourusername@your_from_email_address.com';
 	var $smtp_default_name = 'Your Name';
 	var $useragent		= "CodeIgniter";
@@ -12,7 +13,7 @@ class CI_Email {
 	var $smtp_pass		= "your_smtp_server_password";		// SMTP Password
 	var $smtp_port		= "587";	// SMTP Port, default: 25
 	var $smtp_timeout	= 5;		// SMTP Timeout in seconds
-	var $smtp_crypto	= "tls";		// SMTP Encryption. Can be null, tls or ssl.
+	var $smtp_crypto	= "tls";	// SMTP Encryption. Can be null, tls or ssl.
 	var $wordwrap		= TRUE;		// TRUE/FALSE  Turns word-wrap on/off
 	var $wrapchars		= "76";		// Number of characters to wrap at.
 	var $mailtype		= "html";	// text/html  Defines email formatting
@@ -22,15 +23,15 @@ class CI_Email {
 	var $validate		= FALSE;	// TRUE/FALSE.  Enables email validation
 	var $priority		= "3";		// Default priority (1 - 5)
 	var $newline		= "\r\n";	// Default newline. "\r\n" or "\n" (Use "\r\n" to comply with RFC 822)
-	var $crlf			= "\r\n";	// The RFC 2045 compliant CRLF for quoted-printable is "\r\n".  Apparently some servers,
-									// even on the receiving end think they need to muck with CRLFs, so using "\n", while
-									// distasteful, is the only thing that seems to work for all environments.
+	var $crlf		= "\r\n";	// The RFC 2045 compliant CRLF for quoted-printable is "\r\n".  Apparently some servers,
+						// even on the receiving end think they need to muck with CRLFs, so using "\n", while
+						// distasteful, is the only thing that seems to work for all environments.
 	var $send_multipart	= TRUE;		// TRUE/FALSE - Yahoo does not like multipart alternative, so this is an override.  Set to FALSE for Yahoo.
 	var $bcc_batch_mode	= FALSE;	// TRUE/FALSE  Turns on/off Bcc batch feature
 	var $bcc_batch_size	= 200;		// If bcc_batch_mode = TRUE, sets max number of Bccs in each batch
 	var $_safe_mode		= FALSE;
 	var $_subject		= "";
-	var $_body			= "";
+	var $_body		= "";
 	var $_finalbody		= "";
 	var $_alt_boundary	= "";
 	var $_atc_boundary	= "";
